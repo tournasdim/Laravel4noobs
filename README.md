@@ -10,16 +10,16 @@ The project is divided into autonomous branches , each branch will implement a t
 On this branch , a simple website with a few pages is demonstrated . Logged-in users have the ability to access more pages (which are obviously not accesible by simple visitors) and to send email to the administrator . Logging-in can be done via Basic-Auth or via a form . To improve security Jquery and reCaptcha has been used . A [jquery plugin](http://bassistance.de/jquery-plugins/jquery-plugin-validation/) is used to validate data before it's submitted to the server (email , log-in) . This Jquery plug-in is already installed , so there is no extra work to do . I would highly suggest a [visit to the documentation page](http://docs.jquery.com/Plugins/Validation) of the plugin to explore its many capabilities . On the server , reCaptcha's API is used to verify that the submission was done by a Human . An [extra plugin](https://github.com/greggilbert/recaptcha) is needed to do all the "heavy" workload of reCaptcha's API requests . This plugin  is installed automaticaly , by just running a **composer install** command from the project's root directory . Keep in mind that this plugin needs a couple configurations before it can be used , its GitHub repo gives detailed instructions (see link below). 
 Another feature of this project is that it uses an external webservice (postmarkapp.com) to send emails to the administrator . This option is choosen , instead of an local smtp server , because many developers are testing their work on a Windows machne (which has no build-in web-server) . There is a bit of work to be made first , [visit postmarkapp's website](https://postmarkapp.com/) and register for an account . It's a paid service , but you get 10000 free email (which I think is more than enough to get you started) . After the registration proccess , logg-in to postmarkapp's administration pannel and create a "new mail server"  . After a verify proccess (you will receive a link on your email) a private-key will be given to you . This private key must be pasted into your Laravel's **app/config/mail.php** file . 
 ###Preparing the project in 10-steps :
->Clone this branch into your web-servers directory
->Run a **composer install** command to install the required dependencies
->Run a **php artisan optimize** command (this will generate a compiled.php file into the Bootstrap directory . It will improve the performance of your project)
->create a new database into Mysql 
->Configure **app/config/database.php** with your database credentials
->Run a **php artisan migrate install**
->Run a **php artisan migrate:refresh** and a **php artisan db:seed**
->Register an account on [postmarkapp's site](https://postmarkapp.com/) and configure **app/config/mail.php** wiht your private key (its given to you after your register and verify a mail server ) 
->Register an account on Google's reCaptcha webservice and store the "private and public keys" into a secure place
->Visit [GitHub's repo](https://github.com/greggilbert/recaptcha) (our installed reCaptch plugin) and follow the steps to configure the plugin .
+* Clone this branch into your web-servers directory
+* Run a **composer install** command to install the required dependencies
+* Run a **php artisan optimize** command (this will generate a compiled.php file into the Bootstrap directory . It will improve the performance of your project)
+* create a new database into Mysql 
+* Configure **app/config/database.php** with your database credentials
+* Run a **php artisan migrate install**
+* Run a **php artisan migrate:refresh** and a **php artisan db:seed**
+* Register an account on [postmarkapp's site](https://postmarkapp.com/) and configure **app/config/mail.php** wiht your private key (its given to you after your register and verify a mail server ) 
+* Register an account on Google's reCaptcha webservice and store the "private and public keys" into a secure place
+* Visit [GitHub's repo](https://github.com/greggilbert/recaptcha) (our installed reCaptch plugin) and follow the steps to configure the plugin .
 
 The following screenshot was taken on my Windows machine , it demonstrates the final result . 
 ![An example ](https://dl.dropboxusercontent.com/s/rjhn2gzmax1nxmi/laravel_screenshot.png)
@@ -35,11 +35,11 @@ Reports about bugs are welcome , but also , I would be glad to hear about your e
 Of course the creator of this Framework (Taylor Otwell) and all active members of Laravel's forum / IRC channel . The stylesheet of this branch was copied from another [GitHub laravel project](https://github.com/laravelbook/laravel_auth/blob/master/public/css/style.css) 
 
 ###Tools used during development :
->An headless  Linux box  (CentOs 6) as web-server (Apache 2 , PHP5.4) 
->Sublime Text 2 (Free version)
->Phing for automated  deployment to  GitHub and for FTP to the Linux box 
->Git-Bash  for versioning of the code 
->Windows  7  with WAMP stack (Apache2.2.2 , PHP5.4.3)
+* An headless  Linux box  (CentOs 6) as web-server (Apache 2 , PHP5.4) 
+* Sublime Text 2 (Free version)
+* Phing for automated  deployment to  GitHub and for FTP to the Linux box 
+* Git-Bash  for versioning of the code 
+* Windows  7  with WAMP stack (Apache2.2.2 , PHP5.4.3)
 
 ###License :
 >
