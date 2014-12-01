@@ -1,5 +1,6 @@
 Laravel4noobs 
 =============
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/tournasdim/Laravel4noobs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Laravel is a PHP web application framework with expressive , elegant syntax which  aims to make the development process a pleasing one for the developer without sacrificing application functionality . One of the best ways to learn Laravel is to read through the entirety of its documentation . In addition to the documentation ,  reading the source code of the Framework is a neccesity to understand its internal structure .  If you have already experience with other Frameworks and want to digg into Laravel , my hope is that this project will be a valuable supplement to your learning experience .  My intention is to go straight to the point , with practical examples  . This project is a "work in progress" ,  build during my spare time , just to explore Laravel's functionality . I have to emphasize that I'm not an expert of this Framework and my intention was to share my knowledge with other developers .
 ##Prerequisites :
